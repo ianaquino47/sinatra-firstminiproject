@@ -20,8 +20,12 @@ get '/test' do
   erb "Hi there, Visitor <%= 2 + 2 %>!"
 end
 
-get '/named-cat' do
+post '/named-cat' do
   p params
   @name = params[:name]
   erb(:index)
+end
+
+get '/form' do
+  erb(:cat_form)
 end
